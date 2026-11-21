@@ -12,13 +12,92 @@
 
   <meta
     name="description"
-    content="Teaching and student supervision information
-    for Sombuddha Bhattacharyya at IISER Bhopal."
+    content="Courses, BSMS thesis projects, internship projects,
+    and student supervision information for Sombuddha
+    Bhattacharyya at IISER Bhopal."
   >
 
   <link rel="stylesheet" href="style.css">
 
   <script src="script.js" defer></script>
+
+  <style>
+    /* Compact course table */
+    .teaching-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .teaching-table {
+      width: 100%;
+
+      border-collapse: collapse;
+
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .teaching-table th,
+    .teaching-table td {
+      padding: 9px 12px;
+
+      border-bottom: 1px solid var(--border, #dce4ed);
+
+      text-align: left;
+      vertical-align: middle;
+
+      white-space: nowrap;
+    }
+
+    .teaching-table th {
+      background: var(--banner-background, #132d46);
+      color: #ffffff;
+
+      font-weight: 600;
+    }
+
+    .teaching-table tbody tr:nth-child(even) {
+      background: #f6f8fb;
+    }
+
+    .teaching-table tbody tr:hover {
+      background: #edf3f9;
+    }
+
+    /* Project lists */
+    .project-list {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    @media print {
+      .teaching-table-wrapper {
+        overflow: visible;
+      }
+
+      .teaching-table th,
+      .teaching-table td {
+        white-space: normal;
+      }
+
+      .teaching-table th {
+        background: #ffffff;
+        color: #000000;
+
+        border-bottom: 2px solid #000000;
+      }
+    }
+  </style>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
+
+<script src="enhancements.js" defer></script>
+
 </head>
 
 <body>
@@ -99,50 +178,179 @@
   <main id="main">
     <h1>Teaching</h1>
 
+    <!-- COURSES -->
     <section aria-labelledby="courses-heading">
       <h2 id="courses-heading">
         Courses at IISER Bhopal
       </h2>
 
-      <p>
-        Course information and semester details will be
-        added here.
-      </p>
+      <div
+        class="teaching-table-wrapper"
+        role="region"
+        aria-labelledby="courses-heading"
+        tabindex="0"
+      >
+        <table class="teaching-table">
+          <thead>
+            <tr>
+              <th scope="col">Semester</th>
+              <th scope="col">Course code</th>
+              <th scope="col">Course title</th>
+            </tr>
+          </thead>
 
-      <!--
-        Replace the paragraph above with verified course entries.
+          <tbody>
+	    <tr>
+  <td>Jan–May 2027</td>
+  <td>MTH 408/522</td>
+  <td>Numerical Analysis</td>
+</tr>
 
-        Suggested structure:
+<tr>
+  <td>Aug–Dec 2026</td>
+  <td>MTH 424/524</td>
+  <td>Advanced PDE</td>
+</tr>
 
-        <article class="teaching-entry">
-          <h3>Course title</h3>
+<tr>
+  <td>Jan–May 2026</td>
+  <td>MTH 406</td>
+  <td>Differential Geometry of Curves and Surfaces</td>
+</tr>
 
-          <p>
-            Course code: confirmed course code
-          </p>
+<tr>
+  <td>Aug–Dec 2025</td>
+  <td>MTH 201X</td>
+  <td>Multivariable Calculus</td>
+</tr>
 
-          <p>
-            Semester: confirmed semester and year
-          </p>
-        </article>
-      -->
+            <tr>
+              <td>Jan–May 2025</td>
+              <td>MTH 324/424</td>
+              <td>Math. Methods for Classical Mechanics</td>
+            </tr>
+
+            <tr>
+              <td>Aug–Dec 2024</td>
+              <td>MTH 403</td>
+              <td>Real Analysis II</td>
+            </tr>
+
+            <tr>
+              <td>Jan–May 2024</td>
+              <td>MTH 306</td>
+              <td>Ordinary Differential Equations</td>
+            </tr>
+
+            <tr>
+              <td>Aug–Dec 2023</td>
+              <td>MTH 409/529</td>
+              <td>Optimization Techniques</td>
+            </tr>
+
+            <tr>
+              <td>Jan–May 2023</td>
+              <td>MTH 406</td>
+              <td>Differential Geometry of Curves and Surfaces</td>
+            </tr>
+
+            <tr>
+              <td>Aug–Dec 2022</td>
+              <td>MTH 201X</td>
+              <td>Multivariable Calculus</td>
+            </tr>
+
+            <tr>
+              <td>Jan–May 2022</td>
+              <td>MTH 306</td>
+              <td>Ordinary Differential Equations</td>
+            </tr>
+
+            <tr>
+              <td>Aug–Dec 2021</td>
+              <td>MTH 524/624</td>
+              <td>Advanced Partial Differential Equations</td>
+            </tr>
+
+            <tr>
+              <td>Jan–May 2021</td>
+              <td>MTH 406</td>
+              <td>Differential Geometry of Curves and Surfaces</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section aria-labelledby="supervision-heading">
-      <h2 id="supervision-heading">
-        Student supervision
+    <!-- PROJECT OPPORTUNITIES -->
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">
+        Project opportunities
       </h2>
 
       <p>
-        Details of doctoral students and MS thesis projects
-        are available on the Students page.
+        Please feel free to contact me if you are interested
+        in any of the following projects.
       </p>
 
-      <p>
-        <a class="button" href="students.html">
-          Students and thesis projects
-        </a>
-      </p>
+      <h3>BSMS Thesis Projects</h3>
+
+      <ul class="project-list">
+        <li>
+          Inverse Source Problem for the One-Dimensional
+          Heat Equation.
+        </li>
+
+        <li>
+          Inverse Laplace/Poisson Problems.
+        </li>
+
+        <li>
+          Non-linear System of ODEs, Bifurcation Theory.
+        </li>
+
+        <li>
+          Advanced Partial Differential Equations.
+        </li>
+
+        <li>
+          A Brief Introduction to the Finite Element Method (FEM).
+        </li>
+
+        <li>
+          Inverse Problems in Partial Differential Equations.
+        </li>
+
+        <li>
+          The Theory of Distributions and Pseudo Differential
+          Operators.
+        </li>
+      </ul>
+
+      <h3>Other Internship Projects</h3>
+
+      <ul class="project-list">
+        <li>
+          Contraction Mappings and their Applications.
+        </li>
+
+        <li>
+          Introduction to Lebesgue Measure and Integration.
+        </li>
+
+        <li>
+          Completeness, and Baire Category.
+        </li>
+
+        <li>
+          Hamilton Jacobi equations.
+        </li>
+
+        <li>
+          The Theory of Nonlinear Ordinary Differential Equations
+          and Their Applications.
+        </li>
+      </ul>
     </section>
   </main>
 
